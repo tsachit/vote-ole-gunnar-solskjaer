@@ -1,6 +1,7 @@
 const { openBrowser, goto, waitFor, $, click, closeBrowser } = require('taiko');
+const max = 500;
 (async () => {
-    for (i = 0; i < 500; i++) {
+    for (i = 0; i < max; i++) {
 
 
         try {
@@ -14,6 +15,6 @@ const { openBrowser, goto, waitFor, $, click, closeBrowser } = require('taiko');
         } finally {
             await closeBrowser();
         }
-        console.log(`========================This is the ${i+1} time`)
+        console.log(`========================Iteration ${i+1} complete========================`)
     }
 })();
